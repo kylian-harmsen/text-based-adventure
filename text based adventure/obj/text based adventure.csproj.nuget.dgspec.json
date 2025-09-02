@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\C# map\\text based adventure\\text based adventure\\text based adventure.csproj": {}
+    "C:\\C# map\\text-based-adventure\\text based adventure\\text-based-adventure\\text based adventure\\text based adventure.csproj": {}
   },
   "projects": {
-    "C:\\C# map\\text based adventure\\text based adventure\\text based adventure.csproj": {
+    "C:\\C# map\\text-based-adventure\\text based adventure\\text-based-adventure\\text based adventure\\text based adventure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\C# map\\text based adventure\\text based adventure\\text based adventure.csproj",
+        "projectUniqueName": "C:\\C# map\\text-based-adventure\\text based adventure\\text-based-adventure\\text based adventure\\text based adventure.csproj",
         "projectName": "text based adventure",
-        "projectPath": "C:\\C# map\\text based adventure\\text based adventure\\text based adventure.csproj",
+        "projectPath": "C:\\C# map\\text-based-adventure\\text based adventure\\text-based-adventure\\text based adventure\\text based adventure.csproj",
         "packagesPath": "C:\\Users\\harms\\.nuget\\packages\\",
-        "outputPath": "C:\\C# map\\text based adventure\\text based adventure\\obj\\",
+        "outputPath": "C:\\C# map\\text-based-adventure\\text based adventure\\text-based-adventure\\text based adventure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -43,7 +43,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -64,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
