@@ -1,4 +1,6 @@
-﻿Console.WriteLine("Welcome to text based adventure\n\nDo you want to start y/n\n");
+﻿using System.Runtime.InteropServices;
+
+Console.WriteLine("Welcome to text based adventure\n\nDo you want to start y/n\n");
 string Awnser = Console.ReadLine();
 Console.WriteLine();
 
@@ -13,6 +15,9 @@ else if (Awnser == "y" || Awnser == "Y")
     Boolean forest = false;
     Boolean door = false;
     Boolean GameOn = true;
+    Boolean lock1 = false;
+    Boolean lock2 = false;
+    Boolean lock3 = false;
     Console.WriteLine("would you like to see the instructions first y/n\n");
     Awnser = Console.ReadLine();
     Console.WriteLine();
@@ -56,7 +61,37 @@ else if (Awnser == "y" || Awnser == "Y")
         }
         while (door == true)
         {
+            if (lock1 == true && lock2 == true && lock3 == true)
+            {
+                Console.WriteLine("the door is open what do you want to do enter or leave\n");
+            }
+            else
+            {
+                Console.WriteLine("you see a big old door with 3 locks on it what do you want to investigate\nlock1\nlock2\nlock3\njust leave\n");
+            }
+            Awnser = Console.ReadLine();
+            Console.WriteLine();
 
+            if (Awnser == "lock1")
+            {
+
+            }
+            else if (Awnser == "lock2")
+            {
+
+            }
+            else if (Awnser == "lock3")
+            {
+
+            }
+            else if (Awnser == "leave" && Awnser == "just leave")
+            {
+                door = false;
+            }
+            else
+            {
+                Console.WriteLine("wrong awnser try again");
+            }
         }
     }
 }
