@@ -27,7 +27,7 @@ else if (Awnser == "y" || Awnser == "Y")
     
     while (GameOn == true)
     {
-        Console.WriteLine("where would you like to go first: abandoned shack/forest/strange door\n");
+        Console.WriteLine("where would you like to go: abandoned shack/forest/strange door\n");
         Awnser = Console.ReadLine();
         Console.WriteLine();
         if (Awnser == "abandoned shack" || Awnser == "shack")
