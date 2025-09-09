@@ -18,6 +18,9 @@ else if (Awnser == "y" || Awnser == "Y")
     Boolean lock1 = false;
     Boolean lock2 = false;
     Boolean lock3 = false;
+    Boolean smallKey = false;
+    Boolean mediumKey = false;
+    Boolean bigKey = false;
     Console.WriteLine("would you like to see the instructions first y/n\n");
     Awnser = Console.ReadLine();
     Console.WriteLine();
@@ -72,17 +75,62 @@ else if (Awnser == "y" || Awnser == "Y")
             Awnser = Console.ReadLine();
             Console.WriteLine();
 
-            if (Awnser == "lock1")
+            if (Awnser == "lock1" && lock1 == false)
             {
-
+                Console.WriteLine("you see a small key hole would you try putting something in it y/n\n");
+                Awnser = Console.ReadLine();
+                Console.WriteLine();
+                if (Awnser == "y" || Awnser == "Y" && smallKey == false)
+                {
+                    Console.WriteLine("sorry you have nothing that fits this hole\n");
+                }
+                else if (Awnser == "n" || Awnser == "N" && smallKey == true)
+                {
+                    Console.WriteLine("you put the key in the hole and twist you hear a click\n");
+                    lock1 = true;
+                }
             }
-            else if (Awnser == "lock2")
+            else if (Awnser == "lock1" && lock1 == true)
             {
-
+                Console.WriteLine("you thin to yourself that you already did this lock\n");
             }
-            else if (Awnser == "lock3")
+            else if (Awnser == "lock2" && lock2 == false)
             {
-
+                Console.WriteLine("you see a normal key hole would you try putting something in it y/n\n");
+                Awnser = Console.ReadLine();
+                Console.WriteLine();
+                if (Awnser == "y" || Awnser == "Y" && mediumKey == false)
+                {
+                    Console.WriteLine("sorry you have nothing that fits this hole\n");
+                }
+                else if (Awnser == "n" || Awnser == "N" && mediumKey == true)
+                {
+                    Console.WriteLine("you put the key in the hole and twist you hear a click\n");
+                    lock2 = true;
+                }
+            }
+            else if (Awnser == "lock2" && lock2 == true)
+            {
+                Console.WriteLine("you thin to yourself that you already did this lock\n");
+            }
+            else if (Awnser == "lock3" && lock3 == false)
+            {
+                Console.WriteLine("you see a big key hole would you try putting something in it y/n\n");
+                Awnser = Console.ReadLine();
+                Console.WriteLine();
+                if (Awnser == "y" || Awnser == "Y" && bigKey == false)
+                {
+                    Console.WriteLine("sorry you have nothing that fits this hole\n");
+                }
+                else if (Awnser == "n" || Awnser == "N" && bigKey == true)
+                {
+                    Console.WriteLine("you put the key in the hole and twist you hear a click\n");
+                    lock3 = true;
+                }
+            }
+            else if (Awnser == "lock2" && lock3 == true)
+            {
+                Console.WriteLine("you thin to yourself that you already did this lock\n");
             }
             else if (Awnser == "leave" && Awnser == "just leave")
             {
