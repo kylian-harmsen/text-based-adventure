@@ -1,4 +1,14 @@
 ﻿using System.Runtime.InteropServices;
+Boolean shack = false;
+Boolean forest = false;
+Boolean door = false;
+Boolean GameOn = true;
+Boolean lock1 = false;
+Boolean lock2 = false;
+Boolean lock3 = false;
+Boolean smallKey = false;
+Boolean mediumKey = false;
+Boolean bigKey = false;
 
 Console.WriteLine("Welcome to text based adventure\n\nDo you want to start y/n\n");
 string Awnser = Console.ReadLine();
@@ -11,16 +21,6 @@ if (Awnser == "n" || Awnser == "N")
 
 else if (Awnser == "y" || Awnser == "Y")
 {
-    Boolean shack = false;
-    Boolean forest = false;
-    Boolean door = false;
-    Boolean GameOn = true;
-    Boolean lock1 = false;
-    Boolean lock2 = false;
-    Boolean lock3 = false;
-    Boolean smallKey = false;
-    Boolean mediumKey = false;
-    Boolean bigKey = false;
     Console.WriteLine("would you like to see the instructions first y/n\n");
     Awnser = Console.ReadLine();
     Console.WriteLine();
