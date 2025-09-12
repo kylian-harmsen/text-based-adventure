@@ -116,17 +116,52 @@ else if (Awnser == "y" || Awnser == "Y")
             }
             else
             {
-                Console.WriteLine("not a valid awnser");
+                Console.WriteLine("not a valid awnser\n");
             }
             while (bastment == true)
             {
 
             }
         }
+
         while (forest == true)
         {
-
+            Console.WriteLine("you walk into the forest looking around 2 things stick out an op patch of land and a hollow tree\n");
+            Console.WriteLine("where would you like to look first patch, tree or just leave\n");
+            Awnser = Console.ReadLine();
+            Console.WriteLine();
+            if (Awnser == "patch" && shovel == false)
+            {
+                Console.WriteLine("od patch of land you think something may be buried here\n");
+            }
+            else if (Awnser == "patch" && shovel == true && bigKey == false)
+            {
+                Console.WriteLine("you use the shovel you found to dig a hole you find a neet little box with a big key inside\n");
+                bigKey = true;
+            }
+            else if (Awnser == "patch" && shovel == true && bigKey == true)
+            {
+                Console.WriteLine("I like digging holes but I dont see a point in digging any deeper than this\n");
+            }
+            else if (Awnser == "tree" && code == false)
+            {
+                Console.WriteLine("you walk up to the hollow tree and stick your arm inside you get a small wooden boxx with a code inside it\n");
+                code = true;
+            }
+            else if (Awnser == "tree" && code == true)
+            {
+                Console.WriteLine("you put your arm down the hollow tree but dont find anything new\n");
+            }
+            else if (Awnser == "leave" && Awnser == "just leave")
+            {
+                forest = false;
+            }
+            else
+            {
+                Console.WriteLine("wrong awnser try again\n");
+            }
         }
+
         while (door == true)
         {
             if (lock1 == true && lock2 == true && lock3 == true)
@@ -203,7 +238,7 @@ else if (Awnser == "y" || Awnser == "Y")
             }
             else
             {
-                Console.WriteLine("wrong awnser try again");
+                Console.WriteLine("wrong awnser try again\n");
             }
         }
     }
@@ -211,5 +246,5 @@ else if (Awnser == "y" || Awnser == "Y")
 
 else
 {
-    Console.WriteLine("not a valid awnser");
+    Console.WriteLine("not a valid awnser\n");
 }
