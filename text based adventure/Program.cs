@@ -64,12 +64,12 @@ else if (Awnser == "y" || Awnser == "Y")
             if (bookshelf == false)
             {
                 Console.WriteLine("your indside the old abandoned shack you see a strangly placed bookshelf a safe and a rack of tools\n");
-                Console.WriteLine("what do you wannt to ivestigate shelf safe tools or just leave\n");
+                Console.WriteLine("what do you wnnt to ivestigate shelf safe tools or just leave\n");
             }
             else if (bookshelf == true)
             {
                 Console.WriteLine("your indside the old abandoned shack you see the stairs leading down to a basement a safe and a rack of tools\n");
-                Console.WriteLine("what do you wannt to ivestigate stairs safe tools or just leave\n");
+                Console.WriteLine("what do you want to ivestigate stairs safe tools or just leave\n");
             }
             Awnser = Console.ReadLine();
             Console.WriteLine();
@@ -110,7 +110,7 @@ else if (Awnser == "y" || Awnser == "Y")
                 Console.WriteLine("you go down the stairs and enter the bastment\n");
                 bastment = true;
             }
-            else if (Awnser == "leave" && Awnser == "just leave")
+            else if (Awnser == "leave" || Awnser == "just leave")
             {
                 shack = false;
             }
@@ -120,7 +120,26 @@ else if (Awnser == "y" || Awnser == "Y")
             }
             while (bastment == true)
             {
-
+                Console.WriteLine("you enter the bastment and see a small room with a desk inside what do you want to do go to the desk or leave\n");
+                Awnser = Console.ReadLine();
+                Console.WriteLine();
+                if (Awnser == "desk" && smallKey == false)
+                {
+                    Console.WriteLine("you walk up to the desk and open a drawr inside is a small key and a note the note reads as followed\nif you are here for the magic stone it comes at a cost grabing the stone will make you sick and your life would be cut rather short so you will have a choice use it on some one you love or save yourself\n");
+                    smallKey = true;
+                }
+                else if (Awnser == "desk" && smallKey == true)
+                {
+                    Console.WriteLine("I dont want to read that note again");
+                }
+                else if (Awnser == "leave" || Awnser == "just leave")
+                {
+                    bastment = false;
+                }
+                else
+                {
+                    Console.WriteLine("wrong awnser try again\n");
+                }
             }
         }
 
@@ -145,14 +164,14 @@ else if (Awnser == "y" || Awnser == "Y")
             }
             else if (Awnser == "tree" && code == false)
             {
-                Console.WriteLine("you walk up to the hollow tree and stick your arm inside you get a small wooden boxx with a code inside it\n");
+                Console.WriteLine("you walk up to the hollow tree and stick your arm inside you get a small wooden box with a code inside it\n");
                 code = true;
             }
             else if (Awnser == "tree" && code == true)
             {
                 Console.WriteLine("you put your arm down the hollow tree but dont find anything new\n");
             }
-            else if (Awnser == "leave" && Awnser == "just leave")
+            else if (Awnser == "leave" || Awnser == "just leave")
             {
                 forest = false;
             }
@@ -180,11 +199,11 @@ else if (Awnser == "y" || Awnser == "Y")
                 Console.WriteLine("you see a small key hole would you try putting something in it y/n\n");
                 Awnser = Console.ReadLine();
                 Console.WriteLine();
-                if (Awnser == "y" || Awnser == "Y" && smallKey == false)
+                if (Awnser == "y" && smallKey == false)
                 {
                     Console.WriteLine("sorry you have nothing that fits this hole\n");
                 }
-                else if (Awnser == "n" || Awnser == "N" && smallKey == true)
+                else if (Awnser == "y" && smallKey == true)
                 {
                     Console.WriteLine("you put the key in the hole and twist you hear a click\n");
                     lock1 = true;
@@ -199,11 +218,11 @@ else if (Awnser == "y" || Awnser == "Y")
                 Console.WriteLine("you see a normal key hole would you try putting something in it y/n\n");
                 Awnser = Console.ReadLine();
                 Console.WriteLine();
-                if (Awnser == "y" || Awnser == "Y" && mediumKey == false)
+                if (Awnser == "y" && mediumKey == false)
                 {
                     Console.WriteLine("sorry you have nothing that fits this hole\n");
                 }
-                else if (Awnser == "n" || Awnser == "N" && mediumKey == true)
+                else if (Awnser == "y" && mediumKey == true)
                 {
                     Console.WriteLine("you put the key in the hole and twist you hear a click\n");
                     lock2 = true;
@@ -218,11 +237,11 @@ else if (Awnser == "y" || Awnser == "Y")
                 Console.WriteLine("you see a big key hole would you try putting something in it y/n\n");
                 Awnser = Console.ReadLine();
                 Console.WriteLine();
-                if (Awnser == "y" || Awnser == "Y" && bigKey == false)
+                if (Awnser == "y" && bigKey == false)
                 {
                     Console.WriteLine("sorry you have nothing that fits this hole\n");
                 }
-                else if (Awnser == "n" || Awnser == "N" && bigKey == true)
+                else if (Awnser == "y" && bigKey == true)
                 {
                     Console.WriteLine("you put the key in the hole and twist you hear a click\n");
                     lock3 = true;
@@ -232,7 +251,7 @@ else if (Awnser == "y" || Awnser == "Y")
             {
                 Console.WriteLine("you think to yourself that you already did this lock\n");
             }
-            else if (Awnser == "leave" && Awnser == "just leave")
+            else if (Awnser == "leave" || Awnser == "just leave")
             {
                 door = false;
             }
