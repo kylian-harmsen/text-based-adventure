@@ -14,6 +14,7 @@ Boolean shovel = false;
 Boolean code = false;
 Boolean bookshelf = false;
 Boolean book = false;
+Boolean gateway = false;
 
 Console.WriteLine("Welcome to text based adventure\n\nDo you want to start y/n\n");
 string Awnser = Console.ReadLine();
@@ -186,6 +187,7 @@ else if (Awnser == "y" || Awnser == "Y")
             if (lock1 == true && lock2 == true && lock3 == true)
             {
                 Console.WriteLine("the door is open what do you want to do enter or leave\n");
+                gateway = true;
             }
             else
             {
@@ -194,7 +196,7 @@ else if (Awnser == "y" || Awnser == "Y")
             Awnser = Console.ReadLine();
             Console.WriteLine();
 
-            if (Awnser == "lock1" && lock1 == false)
+            if (Awnser == "lock1" && lock1 == false && gateway == false)
             {
                 Console.WriteLine("you see a small key hole would you try putting something in it y/n\n");
                 Awnser = Console.ReadLine();
@@ -209,11 +211,11 @@ else if (Awnser == "y" || Awnser == "Y")
                     lock1 = true;
                 }
             }
-            else if (Awnser == "lock1" && lock1 == true)
+            else if (Awnser == "lock1" && lock1 == true && gateway == false)
             {
                 Console.WriteLine("you think to yourself that you already did this lock\n");
             }
-            else if (Awnser == "lock2" && lock2 == false)
+            else if (Awnser == "lock2" && lock2 == false && gateway == false)
             {
                 Console.WriteLine("you see a normal key hole would you try putting something in it y/n\n");
                 Awnser = Console.ReadLine();
@@ -228,11 +230,11 @@ else if (Awnser == "y" || Awnser == "Y")
                     lock2 = true;
                 }
             }
-            else if (Awnser == "lock2" && lock2 == true)
+            else if (Awnser == "lock2" && lock2 == true && gateway == false)
             {
                 Console.WriteLine("you think to yourself that you already did this lock\n");
             }
-            else if (Awnser == "lock3" && lock3 == false)
+            else if (Awnser == "lock3" && lock3 == false && gateway == false)
             {
                 Console.WriteLine("you see a big key hole would you try putting something in it y/n\n");
                 Awnser = Console.ReadLine();
@@ -247,13 +249,41 @@ else if (Awnser == "y" || Awnser == "Y")
                     lock3 = true;
                 }
             }
-            else if (Awnser == "lock3" && lock3 == true)
+            else if (Awnser == "lock3" && lock3 == true && gateway == false)
             {
                 Console.WriteLine("you think to yourself that you already did this lock\n");
             }
             else if (Awnser == "leave" || Awnser == "just leave")
             {
                 door = false;
+            }
+            else if  (Awnser == "enter" && gateway == true)
+            {
+                Boolean ending = true;
+                while (ending = true) ;
+                Console.WriteLine("you enter the room and find it laying there the magic stone you grab it and feel its effect imidiatly you will not love very long if this illnes stays\nwhat will you do\ngo home and save your lover\nuse the stone on yourself\n");
+                Awnser = Console.ReadLine();
+                Console.WriteLine();
+                if (Awnser == "go home" || Awnser == "go home and save your lover")
+                {
+                    Console.WriteLine("you head home and cure your lover and spend the little time you now have together happy\n the end");
+                    Console.WriteLine("credits everythink kylian harmsen");
+                    ending = false;
+                    door = false;
+                    GameOn = false;
+                }
+                else if (Awnser == "use the stone on yourself")
+                {
+                    Console.WriteLine("you take the gem for youself feeling to bad about it to confront your lover you leave her never seeing her again");
+                    Console.WriteLine("credits everythink kylian harmsen");
+                    ending = false;
+                    door = false;
+                    GameOn = false;
+                }
+                else
+                {
+                    Console.WriteLine("wrong awnser try again\n");
+                }
             }
             else
             {
